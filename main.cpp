@@ -1,3 +1,8 @@
+/*
+CS303 Assignment 1: Array Functionality
+Dylan Sullins
+*/
+
 #include <iostream>
 #include <fstream>
 #include <sstream>
