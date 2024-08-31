@@ -24,7 +24,7 @@ Dylan Sullins
 4. Remove Value by Index
 5. Print Array
 
-Q. Quit
+    Q. Quit
 
 ## Input Constraints
 Input file must consist of positive integers separated by either a newline or a space. Other inputs will potentially cause unanticipated behavior. Format your input following the patterns of the sample input file, *A1input.txt*
