@@ -10,8 +10,8 @@ Dylan Sullins
 
 ## How to Run
 - The CLI command for this software is broken into 3 parts. *Executable Input Size*
-- Example call: *"A1.exe A1input.txt 100"*
-1. Executable - *A1.exe*: The output of the g++ call during installation. Whatever you chose for "output"
+- Example call on Windows 11 Powershell: *".\A1.exe A1input.txt 100"*
+1. Executable - *A1.exe*: The output of the g++ call during installation. Whatever you chose for "output" executable.
 2. Input - *A1input.txt*: Your input text file. See input constraints for more details.
 3. Size - *100*: The desired size of your array. See input constraints for more details.
 
