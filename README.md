@@ -6,7 +6,7 @@ Dylan Sullins
 1. In a terminal, navigate to the directory that you want to clone the repository into. 
 2. Run the command *"git clone https://github.com/DylanSullins/CS303A1.git"*
 3. Run the command *"cd CS303A1"*
-4. Run the command *"g++ *.cpp -o output"*, where output is the filename for the executable
+4. Run the command *"g++ \*.cpp -o output"*, where output is the filename for the executable
 
 ## How to Run
 - The CLI command for this software is broken into 3 parts. *Executable Input Size*
