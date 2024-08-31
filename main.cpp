@@ -33,6 +33,7 @@ int main(int argc, char* argv[])
 	}
 	int arr[size] {};
 	processInputFile(arr, size, fin);
+	fin.close();
 	printArray(arr, size);
 	std::cout << std::endl;
 
