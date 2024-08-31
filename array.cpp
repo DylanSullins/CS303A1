@@ -8,6 +8,16 @@
 #include "array.h"
 
 void processInputFile(int arr[], int size, std::ifstream& fin) 
+	/*
+	Reads Input File and Stores in Array
+	Parameters:
+		int arr[]: integer array to store values in
+		int size: integer size of array
+		std::ifstrream& fin: ifstream input file object to read from
+
+	Returns:
+		None
+	*/
 {
 	std::string line, tempStr;
 	while (std::getline(fin, line)) 
@@ -29,6 +39,16 @@ void processInputFile(int arr[], int size, std::ifstream& fin)
 }
 
 int search(int key, int arr[], int size)
+	/*
+	Linear Search Over Array
+	Parameters:
+		int key: integer value to find
+		int arr[]: integer array to search
+		int size: integer size of array
+
+	Returns:
+		int: Returns integer index if found, otherwise returns -1
+	*/
 {
 	for (int index = 0; index < size; index++) 
 		if (key == arr[index]) return index;
@@ -36,6 +56,17 @@ int search(int key, int arr[], int size)
 }
 
 std::pair<int, int> modify(int index, int newValue, int arr[], int size)
+	/*
+	Modify Value At Index
+	Parameters:
+		int index: integer index to modify
+		int newValue: integer value to store at index
+		int arr[]: integer array to modify
+		int size: integer size of array
+
+	Returns:
+		pair<int, int>: Returns integer pair (newValue, oldValue)
+	*/
 {
 	if (index >= size) 
 	{
@@ -47,6 +78,16 @@ std::pair<int, int> modify(int index, int newValue, int arr[], int size)
 }
 
 int append(int value, int arr[], int size)
+	/*
+	Append Value to End of Array
+	Parameters:
+		int value: integer value to append
+		int arr[]: integer array to append to
+		int size: integer size of array
+
+	Returns:
+		int: Returns integer index of new value
+	*/
 {
 	for (int index = 0; index < size; index++ ) {
 		if (arr[index] == 0) {
@@ -58,6 +99,16 @@ int append(int value, int arr[], int size)
 }
 
 void removeFromArray(int index, int arr[], int size)
+	/*
+	Remove Value by Index
+	Parameters:
+		int index: integer index to remove
+		int arr[]: integer array to modify
+		int size: integer size of array
+
+	Returns:
+		None
+	*/
 {
 	for (int iter = index; iter < size - 1; iter++)
 	{
@@ -68,6 +119,16 @@ void removeFromArray(int index, int arr[], int size)
 }
 
 void printArray( int arr[], int size, int columns = 10)
+	/*
+	Print Array to Console
+	Parameters:
+		int arr[]: integer array to display
+		int size: integer size of array
+		int columns: integer number of columns to display
+
+	Returns:
+		None
+	*/
 {
 	if (columns <= 0) columns = 10;
 	for( int index = 0; index < size; index++)
@@ -78,6 +139,14 @@ void printArray( int arr[], int size, int columns = 10)
 }
 
 void printMenu()
+	/*
+	Print Formatted Menu to Console
+	Parameters:
+		None
+
+	Returns:
+		None
+	*/
 {
 	std::cout << std::endl;
 	std::cout << std::setfill('=') << std::right << std::setw(10) << "MENU" << std::setw(7) << " " << std::endl;
@@ -90,6 +159,15 @@ void printMenu()
 }
 
 bool processInput(int arr[], int size) 
+	/*
+	Process Input Based on Menu
+	Parameters:
+		int arr[]: integer array to process
+		int size: integer size of array
+
+	Returns:
+		bool: Boolean value to break out of program loop when quitting
+	*/
 {
 	char input;
 	int index, key, newValue, columns;
@@ -157,6 +235,14 @@ bool processInput(int arr[], int size)
 }
 
 int getInt(std::string prompt)
+	/*
+	Gets and Validates Integer Input from User
+	Parameters:
+		std::string prompt: string for text to display before input
+
+	Returns:
+		int: validated integer input
+	*/
 {
 	std::cout << prompt;
 	std::string input;
