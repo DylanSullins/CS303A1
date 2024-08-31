@@ -67,11 +67,12 @@ void removeFromArray(int index, int arr[], int size)
 	return;
 }
 
-void printArray( int arr[], int size )
+void printArray( int arr[], int size, int columns = 10)
 {
+	if (columns <= 0) columns = 10;
 	for( int index = 0; index < size; index++)
 	{
-		if (index % 10 == 0) std::cout << std::endl;
+		if (index % columns == 0) std::cout << std::endl;
 		std::cout << " " << std::setw(3) << std::setfill(' ') << arr[index] << " ";
 	}
 }
@@ -91,7 +92,7 @@ void printMenu()
 bool processInput(int arr[], int size) 
 {
 	char input;
-	int index, key, newValue;
+	int index, key, newValue, columns;
 	std::cout << ">>> ";
 	std::cin >> input;
 	switch(input)
@@ -140,7 +141,8 @@ bool processInput(int arr[], int size)
 			break;
 		case '5':
 			// Print Array
-			printArray(arr, size);
+			columns = getInt("Enter number of columns: ");
+			printArray(arr, size, columns);
 			std::cout << std::endl;
 			break;
 		case 'q':

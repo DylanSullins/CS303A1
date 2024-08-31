@@ -34,7 +34,8 @@ int main(int argc, char* argv[])
 	int arr[size] {};
 	processInputFile(arr, size, fin);
 	fin.close();
-	printArray(arr, size);
+	int columns = getInt("Enter number of columns to display: ");
+	printArray(arr, size, columns);
 	std::cout << std::endl;
 
 
