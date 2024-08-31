@@ -40,6 +40,7 @@ void processInputFile(int arr[], int size, std::ifstream& fin)
 
 int search(int key, int arr[], int size)
 	/*
+	Q1.1)
 	Linear Search Over Array
 	Parameters:
 		int key: integer value to find
@@ -57,6 +58,7 @@ int search(int key, int arr[], int size)
 
 std::pair<int, int> modify(int index, int newValue, int arr[], int size)
 	/*
+	Q1.2)
 	Modify Value At Index
 	Parameters:
 		int index: integer index to modify
@@ -79,6 +81,7 @@ std::pair<int, int> modify(int index, int newValue, int arr[], int size)
 
 int append(int value, int arr[], int size)
 	/*
+	Q1.3)
 	Append Value to End of Array
 	Parameters:
 		int value: integer value to append
@@ -100,6 +103,7 @@ int append(int value, int arr[], int size)
 
 void removeFromArray(int index, int arr[], int size)
 	/*
+	Q1.4)
 	Remove Value by Index
 	Parameters:
 		int index: integer index to remove
@@ -179,11 +183,20 @@ bool processInput(int arr[], int size)
 			// Modify Array
 			index = getInt("Enter an index: ");
 			newValue = getInt("Enter a new value: ");
-			modify(index, newValue, arr, size);
+			// Q2.1 Error Handling
+			try
+			{
+				modify(index, newValue, arr, size);
+			}
+			catch (const std::out_of_range& e) 
+			{
+				std::cout << e.what() << std::endl;
+			}
 			break;
 		case '2':
 			// Append Value to Array
 			newValue = getInt("Enter a value to append: ");
+			// Q2.2 Error Handling
 			try 
 			{
 				append(newValue, arr, size);
