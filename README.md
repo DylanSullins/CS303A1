@@ -23,6 +23,7 @@ Dylan Sullins
 3. Search by Value
 4. Remove Value by Index
 5. Print Array
+
 Q. Quit
 
 ## Input Constraints
