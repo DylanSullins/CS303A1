@@ -25,5 +25,5 @@ Dylan Sullins
 Q. Quit
 
 ## Input Constraints
-Input file must consist of integers separated by eitherr a newline or a space. Other inputs will potentially cause unanticipated behavior. Format your input following the patterns of the sample input file, ==A1input.txt==
+Input file must consist of integers separated by either a newline or a space. Other inputs will potentially cause unanticipated behavior. Format your input following the patterns of the sample input file, ==A1input.txt==
 For size, include at least enough space for the size of your input file. The array's size is fixed; if you supply a size less than the amount of input data, only a portion of the data will be read into the array. For the sample input, ensure size >= 100.
