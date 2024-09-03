@@ -16,6 +16,7 @@ int main(int argc, char* argv[])
 	{
 		std::cout << "Error: Not enough arguments provided to the program. " << argc - 1 
 				  << " arguments passed, expected input-file and array-size." << std::endl;
+		std::cout << "\tAborting process." << std::endl;
 		return -1;
 	}
 
@@ -28,14 +29,14 @@ int main(int argc, char* argv[])
 	// Validate size
 	if (size <= 0)
 	{
-		std::cout << size << " is not a valid size for the array." << std::endl;
+		std::cout << "Error: " << size << " is not a valid size for the array. Aborting process." << std::endl;
 		return -1;
 	}
 
 	// Open File and Validate
 	fin.open(argv[1]);
 	if (!fin.is_open()) {
-		std::cout << "Error: File " << argv[1] << " not found." << std::endl;
+		std::cout << "Error: File " << argv[1] << " not found. Aborting process." << std::endl;
 		return -1;
 	}
 	// Initialize array 
