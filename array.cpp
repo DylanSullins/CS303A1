@@ -70,7 +70,7 @@ std::pair<int, int> modify(int index, int newValue, int arr[], int size)
 		pair<int, int>: Returns integer pair (newValue, oldValue)
 	*/
 {
-	if (index >= size) 
+	if (index >= size || index < 0) 
 	{
 		throw std::out_of_range("Error: Index out of range");
 	}
