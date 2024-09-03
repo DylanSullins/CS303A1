@@ -114,6 +114,8 @@ void removeFromArray(int index, int arr[], int size)
 		None
 	*/
 {
+	if (index >= size || index < 0)
+		throw std::out_of_range("Error: Index out of range");
 	for (int iter = index; iter < size - 1; iter++)
 	{
 		arr[iter] = arr[iter + 1];
