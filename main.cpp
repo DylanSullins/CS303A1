@@ -14,9 +14,9 @@ int main(int argc, char* argv[])
 	// Arguments past the necessary three will be ignored
 	if (argc < 3) 
 	{
-		std::cout << "Error: Not enough arguments provided to the program. " << argc - 1 
-				  << " arguments passed, expected input-file and array-size." << std::endl;
-		std::cout << "\tAborting process." << std::endl;
+		std::cout << "Error: Not enough arguments provided to the program. " << std::endl;
+		std::cout << "\t" << argc - 1 << " arguments passed, expected input-file and array-size." << std::endl;
+		std::cout << "\tAborting process. Refer to the ReadMe for help." << std::endl;
 		return -1;
 	}
 
